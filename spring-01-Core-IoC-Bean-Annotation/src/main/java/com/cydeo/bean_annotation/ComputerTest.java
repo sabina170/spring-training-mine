@@ -17,7 +17,7 @@ import java.util.Arrays;
 public class ComputerTest {
     public static void main(String[] args) {
 
-        System.out.println("Creating Container");
+        System.out.println("****************Creating Container*******************");
 
         //Creating container by using Application Context
         ApplicationContext container = new AnnotationConfigApplicationContext(ComputerConfig.class, RandomConfig.class);
@@ -25,7 +25,7 @@ public class ComputerTest {
         //Creating container by using BeanFactory
         BeanFactory context = new AnnotationConfigApplicationContext();
 
-        System.out.println("************Retrieving the beans******************");
+        System.out.println("************1st way : Retrieving the beans******************");
 
         SonyMonitor sony = container.getBean(SonyMonitor.class);
         DellCase dell = container.getBean(DellCase.class);
@@ -37,9 +37,9 @@ public class ComputerTest {
 
         dell.pressPowerButton();
 
-        System.out.println("************Retrieving the beans******************");
+        System.out.println("************2nd way: Retrieving the beans******************");
 
-//        Monitor theMonitor = container.getBean(Monitor.class);
+//        Monitor theMonitor = container.getBean(Monitor.class);  // Exception "NoUniqueBeanDefinition"
 //        Case theCase = container.getBean(Case.class);
 //        Motherboard theMotherboard = container.getBean(Motherboard.class);
 //
