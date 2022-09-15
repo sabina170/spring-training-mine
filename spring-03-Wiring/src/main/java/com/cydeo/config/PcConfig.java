@@ -14,9 +14,18 @@ public class PcConfig {
         return new Dimensions(50,10,10);
     }
 
+    //1st way of achieve wiring injection - by using method parameter:
     @Bean
     public Case caseDell(Dimensions dimensions){
-
         return new DellCase("220B","Dell","240",dimensions);
     }
+
+    //2nd way of achieve wiring injection - by using method call:
+//    @Bean
+//    public Case caseDell(){
+//        return new DellCase("220B","Dell","240",dimensions());
+//    }
+
+
+
 }
