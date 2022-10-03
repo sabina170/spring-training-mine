@@ -18,8 +18,4 @@ public class MentorController {
         return "mentor/mentor-register";
     }
 
-    @RequestMapping("/drop") // localhost:9090/mentor/drop
-    public String drop(){
-        return "student/register";
-    }
 }
