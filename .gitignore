@@ -6,3 +6,5 @@
 /spring-06-Core-BeanScope/target/
 /spring-09-MVC-Model/.gitignore
 /spring-08-MVC-Controller/.gitignore
+/spring-02-Core-IoC-Stereotype-Annotation/target/
+/spring-03-Wiring/target/
