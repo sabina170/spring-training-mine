@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/student")
 public class StudentController {
 
-    @RequestMapping("/register") // localhost:808/student/register
+    @RequestMapping("/register") // localhost:9090/student/register
     public String register(Model model){
 
         model.addAttribute("students", DataGenerator.createStudent());
         return "student/register";
     }
 
-    @RequestMapping("/welcome") // localhost:808/student/welcome?name=Ozzy
+    @RequestMapping("/welcome") // localhost:9090/student/welcome?name=Sabina
     public String welcome(@RequestParam String name){
         System.out.println(name);
 
