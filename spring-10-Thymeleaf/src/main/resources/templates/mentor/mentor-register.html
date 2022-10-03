@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cydeo</title>
+</head>
+<body>
+
+
+<h2>Welcome to Mentor Register Page</h2>
+
+    <div align="center">
+        <form th:object="${mentor}">
+            <label>First Name:</label>
+            <input type="text" th:field="*{firstName}"> <br>
+
+            <label>Last Name:</label>
+            <input type="text" th:field="*{lastName}"> <br>
+
+
+        </form>
+</div>
+
+
+</body>
+</html>

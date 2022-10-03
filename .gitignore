@@ -3,3 +3,6 @@
 /spring-01-Core-IoC-Bean-Annotation/target/
 /spring-04-Autowiring/target/
 /spring-05-Core-Abstraction/target/
+/spring-06-Core-BeanScope/target/
+/spring-09-MVC-Model/.gitignore
+/spring-08-MVC-Controller/.gitignore
