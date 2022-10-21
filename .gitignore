@@ -8,3 +8,11 @@
 /spring-08-MVC-Controller/.gitignore
 /spring-02-Core-IoC-Stereotype-Annotation/target/
 /spring-03-Wiring/target/
+/spring-11-Data-TableCrestion/.mvn/
+/spring-11-Data-TableCrestion/mvnw
+/spring-11-Data-TableCrestion/mvnw.cmd
+/spring-11-Data-TableCrestion/HELP.md
+/spring-11-Data-TableCrestion/.gitignore
+/spring-00-Coupling/target/
+/spring-10-Thymeleaf/src/test/
+/spring-10-Thymeleaf/.mvn/
