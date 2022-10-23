@@ -21,13 +21,11 @@ public class Student {
     private String lastName;
     private String email;
 
-    @Column(columnDefinition ="DATE")
+    @Column(columnDefinition = "DATE")
     private LocalDate birthDate;
-
-    @Column(columnDefinition ="TIME")
+    @Column(columnDefinition = "TIME")
     private LocalTime birthTime;
-
-    @Column(columnDefinition ="TIMESTAMP")
+    @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime birthDateTime;
 
     @Enumerated(EnumType.STRING)
