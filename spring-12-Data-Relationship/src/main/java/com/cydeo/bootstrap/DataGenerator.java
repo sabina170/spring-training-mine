@@ -33,9 +33,7 @@ public class DataGenerator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-
-
-        Payment payment1 = new Payment(LocalDate.of(2022,4,19),new BigDecimal("150000"), Status.SUCCES);
+        Payment payment1 = new Payment(LocalDate.of(2022,4,19),new BigDecimal("150000"), Status.SUCCESS);
         PaymentDetail paymentDetail1 = new PaymentDetail(new BigDecimal("140000"),new BigDecimal("10000"),LocalDate.of(2022,4,24));
 
         payment1.setPaymentDetail(paymentDetail1);
@@ -50,8 +48,6 @@ public class DataGenerator implements CommandLineRunner {
         payment1.setMerchant(merchant1);
         payment2.setMerchant(merchant1);
 
-
-
         Item item1 = new Item("Milk","M01");
         Item item2 = new Item("Sugar","S01");
         Item item3 = new Item("Bread","B01");
@@ -64,7 +60,7 @@ public class DataGenerator implements CommandLineRunner {
 
         itemRepository.save(item1);
         itemRepository.save(item2);
-        itemRepository.save(item2);
+        itemRepository.save(item3);
 
         cartRepository.save(cart1);
         cartRepository.save(cart2);
@@ -74,9 +70,6 @@ public class DataGenerator implements CommandLineRunner {
 
         paymentRepository.save(payment1);
         paymentRepository.save(payment2);
-
-        System.out.println(paymentRepository.findById(2L).get().getPaymentDetail().getCommissionAmount());
-
 
     }
 }
