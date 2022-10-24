@@ -16,3 +16,7 @@
 /spring-00-Coupling/target/
 /spring-10-Thymeleaf/src/test/
 /spring-10-Thymeleaf/.mvn/
+/spring-12-Data-Relationship/mvnw
+/spring-12-Data-Relationship/mvnw.cmd
+/spring-12-Data-Relationship/.mvn/
+/spring-12-Data-Relationship/.gitignore
