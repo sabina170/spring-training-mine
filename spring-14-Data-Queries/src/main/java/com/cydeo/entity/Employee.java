@@ -1,3 +1,5 @@
+
+
 package com.cydeo.entity;
 
 import com.cydeo.enums.Gender;
@@ -26,5 +28,6 @@ public class Employee extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "region_id")
     private Region region;
+
 
 }
