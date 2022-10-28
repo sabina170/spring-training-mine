@@ -3,12 +3,14 @@ package com.cydeo.repository;
 import com.cydeo.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDate;
 import java.util.List;
 
 public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
 
+    // (method name matters)
     //Display all employees with email address ""
     List<Employee> findByEmail(String email);
 
@@ -41,6 +43,7 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
     List<Employee> findByEmailIsNull();
 
 
+    // 2.JPQL query (method name doesn't matter):
     @Query("SELECT employee FROM Employee employee WHERE employee.email='amcnee1@google.es'")
     Employee retrieveEmployeeDetail();
 
@@ -87,6 +90,20 @@ public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
     //SORTING in Desc order:
     @Query("SELECT e FROM Employee  e ORDER BY e.salary DESC")
     List<Employee> retrieveEmployeeSalaryOrderDesc();
+
+
+    //3. Native Query (method name doesn't matter) :
+    @Query(value = "SELECT * FROM employees WHERE salary = ?1", nativeQuery = true)
+    List<Employee> retrieveEmployeeDetailBySalary(int salary);
+
+    //Named Parameter :
+    @Query("SELECT e FROM Employee e WHERE e.salary = :salary")
+    List<Employee> retrieveEmployeeSalary (@Param("salary") int salary);
+
+
+
+
+
 
 
 
