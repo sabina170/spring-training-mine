@@ -1,5 +1,6 @@
 package com.cydeo;
 
+import com.cydeo.repository.CourseRepository;
 import com.cydeo.repository.DepartmentRepository;
 import com.cydeo.repository.EmployeeRepository;
 import com.cydeo.repository.RegionRepository;
@@ -14,10 +15,14 @@ public class QueryDemo implements CommandLineRunner {
 
     private final EmployeeRepository employeeRepository;
 
-    public QueryDemo(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository) {
+    private final CourseRepository courseRepository;
+
+
+    public QueryDemo(RegionRepository regionRepository, DepartmentRepository departmentRepository, EmployeeRepository employeeRepository, CourseRepository courseRepository) {
         this.regionRepository = regionRepository;
         this.departmentRepository = departmentRepository;
         this.employeeRepository = employeeRepository;
+        this.courseRepository = courseRepository;
     }
 
     @Override
@@ -39,5 +44,10 @@ public class QueryDemo implements CommandLineRunner {
 
         System.out.println("-----------EMPLOYEES----------");
         System.out.println(employeeRepository.retrieveEmployeeDetail());
+
+        System.out.println("-----------COURSES----------");
+        System.out.println(courseRepository.findByCategory("Spring"));
+        System.out.println(courseRepository.findByCategoryOrderByName("Spring"));
+
     }
 }
