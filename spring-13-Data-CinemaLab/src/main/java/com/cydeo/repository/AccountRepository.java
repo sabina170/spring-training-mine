@@ -3,6 +3,7 @@ package com.cydeo.repository;
 import com.cydeo.entity.Account;
 import com.cydeo.enums.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -38,13 +39,21 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
 
     // ------------------- JPQL QUERIES ------------------- //
 
-    //Write a JPQL query that returns all accounts
+    //Write a JPQL query that returns all accounts:
+    @Query("SELECT a FROM Account a")
+    List<Account> fetchAllAccounts ();
 
 
-    //Write a JPQL query to list all admin accounts
+    //Write a JPQL query to list all admin accounts:
+    @Query("SELECT a FROM Account a Where a.role='ADMIN'")
+    List<Account> fetchAdminAccounts ();
 
 
-    //Write a JPQL query to sort all accounts with age
+    //Write a JPQL query to sort all accounts with age:
+    @Query("SELECT a FROM Account a ORDER BY a.age DESC")
+    List<Account> fetchOrderBasedOnAge();
+
+    List<Account> sortAllAccountsWithAge();
 
 
     // ------------------- Native QUERIES ------------------- //
