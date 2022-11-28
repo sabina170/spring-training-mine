@@ -31,3 +31,10 @@
 /spring-15-REST/mvnw
 /spring-15-REST/mvnw.cmd
 /spring-15-REST/spring-15-REST.iml
+/spring-17-REST-ConsumingAPIs/.mvn/
+/spring-17-REST-ConsumingAPIs/.gitignore
+/spring-17-REST-ConsumingAPIs/HELP.md
+/spring-17-REST-ConsumingAPIs/mvnw
+/spring-17-REST-ConsumingAPIs/mvnw.cmd
+/.gitignore
+/spring-training-mine.iml
