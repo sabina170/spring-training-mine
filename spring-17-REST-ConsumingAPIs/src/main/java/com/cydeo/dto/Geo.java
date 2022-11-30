@@ -13,8 +13,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "lat",
-    "lng"
+        "lat",
+        "lng"
 })
 @Generated("jsonschema2pojo")
 public class Geo {

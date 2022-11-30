@@ -12,20 +12,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({  // field order, in which order we wanna see fields
-    "id",
-    "name",
-    "username",
-    "email",
-    "address",
-    "phone",
-    "website",
-    "company"
+@JsonPropertyOrder({
+        "id",
+        "name",
+        "username",
+        "email",
+        "address",
+        "phone",
+        "website",
+        "company"
 })
 @Generated("jsonschema2pojo")
 public class User {
 
-    @JsonProperty("id") // @JsonProperty - fields name, if we wannna change field name, we can do here
+    @JsonProperty("id")
     private Integer id;
     @JsonProperty("name")
     private String name;
@@ -41,7 +41,7 @@ public class User {
     private String website;
     @JsonProperty("company")
     private Company company;
-    @JsonIgnore  // @JsonIgnore - fields that we want to see in json output
+    @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("id")

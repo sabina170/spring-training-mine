@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.net.URI;
 import java.util.Arrays;
 
 @RestController
@@ -16,32 +15,41 @@ import java.util.Arrays;
 public class Consume_RestTemplate {
 
     private final String URI = "https://jsonplaceholder.typicode.com/users";
+
     private final RestTemplate restTemplate;
 
     public Consume_RestTemplate(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping
-    public ResponseEntity<User[]> readAllUsers() {
+    @GetMapping // get all User objects
+    public ResponseEntity<User[]> readAllUsers(){
+
         return restTemplate.getForEntity(URI, User[].class);
     }
 
-    @GetMapping("{id}")
-    public Object readUser(@PathVariable("id") Integer id) {
-        String URL = URI + "/id";
-        return restTemplate.getForObject(URI, Object.class, id);
+    @GetMapping("{id}") //get one specified user object
+    public Object readUser(@PathVariable("id") Integer id){
+
+        String URL = URI + "/{id}";
+
+        return restTemplate.getForObject(URL, Object.class,id);
+
     }
 
-    //i set the headers:
     @GetMapping("/test")
-    public ResponseEntity<Object> consumePostFromDummyApi() {
-        HttpHeaders headers = new HttpHeaders();
+    public ResponseEntity<Object> consumePostFromDummyApi(){
+        //when we consume end point, that is asking some field to execute, here it is asking me app-id field. It is kind of security.
+
+        HttpHeaders headers =new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        headers.set("app-id", "6298ebfecd0551211fce37a6");
+        //set the field to the headers, that needs
+        headers.set("app-id","6298ebfecd0551211fce37a6");
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
+        //exchange () method - we use for passing url, heade what method it executes, which is entity, since i di=ont have dto, it is gonna be Object class.
+        return restTemplate.exchange("https://dummyapi.io/data/v1/user?limit=10", HttpMethod.GET,entity,Object.class);
 
-        return restTemplate.exchange("https://dummyapi.io/data/v1/user?limit=10", HttpMethod.GET, entity,Object.class );
     }
+
 }

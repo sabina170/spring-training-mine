@@ -13,11 +13,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "street",
-    "suite",
-    "city",
-    "zipcode",
-    "geo"
+        "street",
+        "suite",
+        "city",
+        "zipcode",
+        "geo"
 })
 @Generated("jsonschema2pojo")
 public class Address {
