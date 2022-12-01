@@ -38,3 +38,9 @@
 /spring-17-REST-ConsumingAPIs/mvnw.cmd
 /.gitignore
 /spring-training-mine.iml
+/spring-19-REST-OpenAPI3/mvnw
+/spring-19-REST-OpenAPI3/.gitignore
+/spring-19-REST-OpenAPI3/mvnw.cmd
+/spring-19-REST-OpenAPI3/HELP.md
+/spring-19-REST-OpenAPI3/.mvn/
+/.gitignore
