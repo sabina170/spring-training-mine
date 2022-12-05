@@ -50,3 +50,11 @@
 /spring-20-REST-Security-Keycloak-LicenseApp/mvnw
 /spring-20-REST-Security-Keycloak-LicenseApp/mvnw.cmd
 /spring-training-mine.iml
+/spring-20-REST-Security-Keycloak-OrganizationsApp/.mvn/
+/spring-20-REST-Security-Keycloak-OrganizationsApp/target/
+/spring-20-REST-Security-Keycloak-OrganizationsApp/.gitignore
+/spring-20-REST-Security-Keycloak-OrganizationsApp/HELP.md
+/spring-20-REST-Security-Keycloak-OrganizationsApp/mvnw
+/spring-20-REST-Security-Keycloak-OrganizationsApp/mvnw.cmd
+/.gitignore
+/spring-training-mine.iml
